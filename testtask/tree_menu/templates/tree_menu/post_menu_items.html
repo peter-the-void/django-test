@@ -1,0 +1,13 @@
+{% extends 'tree_menu/base.html' %}
+
+{% load menu_extra %}
+
+{% block menu_items %}
+	{% for obj in menu_items %}
+		{% if obj|guards:key_item %}
+			{% get_items_starttag obj%}
+	    		<a href={% edit_menuitem_url obj %}>{{obj.name}}</a>
+	    	{% get_items_endtag obj%}
+	    {% endif %}
+	{% endfor %}
+{% endblock menu_items %}

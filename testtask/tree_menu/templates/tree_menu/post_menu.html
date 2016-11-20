@@ -1,0 +1,14 @@
+{% extends 'tree_menu/base.html' %}
+
+{% load menu_extra %}
+
+{% block menu %}
+	<div>
+		{%for menu in menus %}
+		<li>
+			<a href={% edit_menu_url menu %}>{{menu.name}}</a>
+		</li>
+		<br>
+		{% endfor %}
+	</div>
+{% endblock menu %}

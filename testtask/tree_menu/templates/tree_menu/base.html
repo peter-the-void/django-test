@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Ola's blog</title>
+    </head>
+    <body>
+    	<dir class='menu_block'>
+    		<h4>List of Menu</h4>
+    		{% block menu %}
+        		<div class = 'menu_items_block'>
+        			{% block menu_items %}
+            		{% endblock %}
+        		</div>
+        	{% endblock %}
+        </dir>
+    </body>
+</html>
